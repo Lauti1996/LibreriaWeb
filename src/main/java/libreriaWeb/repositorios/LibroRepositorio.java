@@ -15,10 +15,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LibroRepositorio extends JpaRepository<Libro, String> {
     
-    @Query("SELECT l FROM libro l WHERE l.titulo = :titulo")
+    @Query("SELECT l FROM Libro l WHERE l.titulo = :titulo")
     public Libro buscarPorTitulo(@Param("titulo") String titulo);
     
-    @Query("SELECT l FROM libro l")
+    @Query("SELECT l FROM Libro l")
     public List<Libro> listarLibros();
     
 }

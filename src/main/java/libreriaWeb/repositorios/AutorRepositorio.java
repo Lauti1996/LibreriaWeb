@@ -11,10 +11,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AutorRepositorio extends JpaRepository<Autor, String>{
     
-    @Query("SELECT a FROM autor a WHERE a.nombre = :nombre")
+    @Query("SELECT a FROM Autor a WHERE a.nombre = :nombre")
     public Autor buscarPorNombre(@Param("nombre") String nombre);
     
-    @Query("SELECT a FROM autor a")
+    @Query("SELECT a FROM Autor a")
     public List<Autor> listarAutores();
     
     
